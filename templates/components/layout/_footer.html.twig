@@ -1,0 +1,42 @@
+<footer class="footer-gradient pt-5 mt-5 text-white">
+  <div class="container">
+    <div class="row">
+      <!-- Colonne 1 : logo + nom -->
+      <div class="col-md-4 mb-4 mb-md-0 d-flex align-items-start gap-3">
+        <img src="{{ asset('images/logos/logo.png') }}" alt="Logo Techfuls" style="width: 50px; height: auto;">
+        <div>
+          <h5 class="fw-bold mb-1">Techfuls</h5>
+          <small>Développement & Formation Web</small>
+        </div>
+      </div>
+
+      <!-- Colonne 2 : navigation -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h6 class="fw-bold mb-3">Navigation</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne 3 : légales -->
+      <div class="col-md-4">
+        <h6 class="fw-bold mb-3">Informations légales</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Conditions générales d'utilisation</a></li>
+          <li><a href="#">Conditions générales de vente</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-white opacity-50 my-4">
+
+    <!-- Mini copyright -->
+    <div class="text-center pb-2">
+      <small>© {{ "now"|date("Y") }} Techfuls. Tous droits réservés.</small>
+    </div>
+  </div>
+</footer>
