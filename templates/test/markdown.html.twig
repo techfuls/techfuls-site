@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Test Markdown{% endblock %}
+
+{% block body %}
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active">Introduction</a>
+        <a href="#" class="list-group-item list-group-item-action">Chapitre 1</a>
+        <a href="#" class="list-group-item list-group-item-action">Chapitre 2</a>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <article class="prose bg-white p-4 shadow-sm rounded">
+        {{ content|raw }}
+      </article>
+    </div>
+  </div>
+</div>
+{% endblock %}
