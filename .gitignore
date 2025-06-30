@@ -6,6 +6,8 @@
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /var/
+/.idea/
+/node_modules/
 /vendor/
 ###< symfony/framework-bundle ###
 
@@ -17,4 +19,5 @@
 ###> symfony/asset-mapper ###
 /public/assets/
 /assets/vendor/
+/public/uploads/
 ###< symfony/asset-mapper ###
