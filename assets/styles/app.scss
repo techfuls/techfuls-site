@@ -10,40 +10,73 @@ $primary: #06D6A0;
 $font-family-sans-serif: 'Poppins', sans-serif;
 $body-bg: #EFEFEF;
 
-// 3. Police Google
+// 3. Import Police Google (après variables)
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-// 4. Bootstrap (doit venir après tes variables)
+// 4. Import Bootstrap (doit venir après les variables)
 @import "~bootstrap/scss/bootstrap";
 
-// 5. FontAwesome
+// 5. Import FontAwesome
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
-// 6. Styles globaux (facultatif)
+// 6. Styles globaux (personnalisation)
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: $body-bg;
 }
-// Dégradé de fond Hero
+
+// Dégradé de fond pour Hero
 .hero-gradient {
-  background: linear-gradient(135deg, #06D6A0, #3DD6B7) !important;
+  background: linear-gradient(135deg, $primary, #3DD6B7) !important;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
-// Texte blanc avec ombre douce
-.text-shadow {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
+
+// Dégradé de fond pour Footer
 .footer-gradient {
-  background: linear-gradient(135deg, #06D6A0, #3DD6B7);
+  background: linear-gradient(135deg, $primary, #3DD6B7);
   color: white;
 }
+
 .footer-gradient a {
   color: white;
   text-decoration: none;
 }
+
 .footer-gradient a:hover {
   text-decoration: underline;
+}
+
+// Texte blanc avec ombre douce (utilisé sur hero notamment)
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+// Boutons
+
+// Transition douce sur btn-primary
+.btn-primary {
+  color: #fff !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+// Hover btn-primary : foncé + ombre (tu peux ajuster la couleur)
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: darken($primary, 10%);
+  box-shadow: 0 4px 15px rgba(6, 214, 160, 0.6);
+  color: #fff !important;
+}
+
+// Hover / focus / active pour btn-outline-primary (texte blanc et fond plein)
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  color: #fff !important;
+  background-color: $primary !important;
+  border-color: $primary !important;
 }
